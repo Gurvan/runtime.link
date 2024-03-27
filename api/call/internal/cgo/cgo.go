@@ -38,6 +38,12 @@ typedef uint32_t char32_t;
 #include <uchar.h>
 #endif
 
+#ifdef WIN32
+#define MATH_ERRNO 1
+#define MATH_ERREXCEPT 2
+#define math_errhandling 0
+#endif
+
 const double LDBL_EPSILON_DOUBLE = LDBL_EPSILON;
 
 char* LDBL_MAX_STRING() {
